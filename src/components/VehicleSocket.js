@@ -8,17 +8,16 @@ class VehicleSocket extends Component {
   constructor(props) {
     super(props);
 
-    this.state = {
+    this.state = {  
       vehicles: [],
     };
 
-    this.socket = io(process.env.REACT_APP_SERVER, {
+    this.socket = io('http://192.168.26.90:3001', {
       transports: ["websocket"],
     });
 
     this.socket.on("vehicles_update", data => {
         console.log('Data:', data);
-
         this.setState({
           vehicles: data,
         })
@@ -30,11 +29,20 @@ class VehicleSocket extends Component {
 
   componentDidMount() {
 
-    this.socket.emit('fuck', 'fucking..')
 
   }
 
   render() {
+
+
+    this.socket.on('duck', (data) => {
+      console.log("VEL 1");
+      console.log(data);
+      
+    });
+
+    this.socket.emit('fuck', 'asd');
+    console.log(this.props);
     return this.props.children(this.state.vehicles);
   }
 }

@@ -17,28 +17,15 @@ class VehicleSocket extends Component {
     });
 
     this.socket.on("vehicles_update", data => {
-        console.log('Data:', data);
-        this.setState({
-          vehicles: data,
-        })
-      }
-    );
-
-  }
-
-  componentDidMount() {
-
+      console.log('Data:', data);
+      this.setState({
+        vehicles: data,
+      })
+    });
 
   }
 
   render() {
-
-
-    this.socket.on('duck', (data) => {
-      console.log(data);
-      
-    });
-
     return this.props.children(this.state.vehicles);
   }
 }

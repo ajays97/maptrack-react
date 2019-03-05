@@ -28,19 +28,19 @@ class App extends Component {
                 />
 
                 {vehicles.map(vehicle => {
-                  const { routeNumber, type } = vehicle;
+                  const { vehicleID, type } = vehicle;
                   let classes = {
                     ["marker"]: true,
                   };
                   if (type === "rail") {
-                    classes[`rail${routeNumber}`] = true;
+                    classes[`rail${vehicleID}`] = true;
                   } else if (type === "bus") {
                     classes["bus"] = true;
                   }
 
                   const icon = divIcon({
                     className: classnames(classes),
-                    html: `<span>${routeNumber}</span>`,
+                    html: `<span>${vehicleID}</span>`,
                   });
 
                   return (

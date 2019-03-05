@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import classnames from "classnames";
 import { Map, Marker, TileLayer } from "react-leaflet";
-import VehicleSocket from "./VehicleSocket";
+import VehicleSocket from "../VehicleSocket/VehicleSocket";
 import { divIcon } from "leaflet";
 
 const position = [12.9, 77.63];

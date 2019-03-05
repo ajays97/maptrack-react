@@ -5,7 +5,9 @@ class App extends Component {
   
   render() {
     return (
-      <MainMap />
+      <div>
+        <MainMap />
+      </div>
     );
   }
 }

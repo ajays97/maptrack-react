@@ -17,6 +17,8 @@ class App extends Component {
     return (
       <VehicleSocket>
         {vehicles => {
+          console.log('Vehicle data:', vehicles);
+          
           return (
             <div style={cover}>
               <Map center={this.state.position} zoom={this.state.zoom} style={cover}>

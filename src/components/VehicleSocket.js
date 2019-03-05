@@ -12,7 +12,7 @@ class VehicleSocket extends Component {
       vehicles: [],
     };
 
-    this.socket = io('http://192.168.26.90:3001', {
+    this.socket = io('http://192.168.26.90:3001/', {
       transports: ["websocket"],
     });
 
@@ -22,7 +22,6 @@ class VehicleSocket extends Component {
           vehicles: data,
         })
       }
-
     );
 
   }
@@ -36,13 +35,10 @@ class VehicleSocket extends Component {
 
 
     this.socket.on('duck', (data) => {
-      console.log("VEL 1");
       console.log(data);
       
     });
 
-    this.socket.emit('fuck', 'asd');
-    console.log(this.props);
     return this.props.children(this.state.vehicles);
   }
 }

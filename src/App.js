@@ -4,7 +4,7 @@ import { Map, Marker, TileLayer } from "react-leaflet";
 import VehicleSocket from "./components/VehicleSocket";
 import { divIcon } from "leaflet";
 
-const position = [45.52, -122.6716007];
+const position = [12.9, 77.63];
 const cover = { position: "absolute", left: 0, right: 0, top: 0, bottom: 0 };
 const urlParams = new URLSearchParams(window.location.search);
 

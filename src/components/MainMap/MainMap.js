@@ -30,8 +30,8 @@ class MainMap extends Component {
                   attribution='&copy; <a href="http://osm.org/copyright">OpenStreetMap</a> contributors'
                 />
                 
-                {/* {
-                  assets.map(vehicle => {
+                {
+                  assets.assets.map(vehicle => {
                   const { vehicleID, type } = vehicle;
                   let classes = {
                     ["marker"]: true,
@@ -54,7 +54,7 @@ class MainMap extends Component {
                       position={[vehicle.latitude, vehicle.longitude]}
                     />
                   );
-                })} */}
+                })}
               </Map>
             </div>
           );

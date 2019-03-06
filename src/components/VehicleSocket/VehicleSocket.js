@@ -1,33 +1,42 @@
 import {
   Component
 } from "react";
+import {connect} from 'react-redux'
 import io from "socket.io-client";
+import { fetchAssetsLocations } from '../../actions/assets';
+
+let socket
+const mapStateToProps = (state = {}) => {
+	// console.dir(state)
+    return {...state};
+};
 
 class VehicleSocket extends Component {
 
   constructor(props) {
     super(props);
 
-    this.state = {
-      vehicles: [],
-    };
+    const { dispatch } = this.props;
 
-    this.socket = io('http://192.168.26.90:3001/', {
+    socket = io('http://192.168.26.90:3001/', {
       transports: ["websocket"],
     });
 
-    this.socket.on("vehicles_update", data => {
-      console.log('Data:', data);
-      this.setState({
-        vehicles: data,
-      })
-    });
+    dispatch(fetchAssetsLocations(socket));
 
+    socket.on("vehicles_update", data => {
+      dispatch(fetchAssetsLocations(socket));
+    });
+  }
+
+  componentWillUnmount() {
+    socket.disconnect();
   }
 
   render() {
-    return this.props.children(this.state.vehicles);
+    const { dispatch, assets } = this.props;
+    return this.props.children(assets);
   }
 }
 
-export default VehicleSocket;
+export default connect(mapStateToProps)(VehicleSocket);

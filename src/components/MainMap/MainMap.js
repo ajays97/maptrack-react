@@ -19,8 +19,8 @@ class MainMap extends Component {
 
       return(
         <VehicleSocket>
-        {vehicles => {
-          console.log('Vehicle data:', vehicles);
+        {assets => {
+          console.log('Vehicle data:', assets);
           
           return (
             <div style={cover}>
@@ -29,8 +29,9 @@ class MainMap extends Component {
                   url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
                   attribution='&copy; <a href="http://osm.org/copyright">OpenStreetMap</a> contributors'
                 />
-
-                {vehicles.map(vehicle => {
+                
+                {/* {
+                  assets.map(vehicle => {
                   const { vehicleID, type } = vehicle;
                   let classes = {
                     ["marker"]: true,
@@ -53,7 +54,7 @@ class MainMap extends Component {
                       position={[vehicle.latitude, vehicle.longitude]}
                     />
                   );
-                })}
+                })} */}
               </Map>
             </div>
           );

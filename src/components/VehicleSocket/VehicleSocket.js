@@ -34,8 +34,10 @@ class VehicleSocket extends Component {
   }
 
   render() {
-    const { dispatch, assets } = this.props;
-    return this.props.children(assets);
+    console.log(this.props);
+    
+    const { dispatch, assetStore } = this.props;
+    return this.props.children(assetStore.assets);
   }
 }
 

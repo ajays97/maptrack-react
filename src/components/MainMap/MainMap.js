@@ -31,7 +31,7 @@ class MainMap extends Component {
                 />
                 
                 {
-                  assets.assets.map(vehicle => {
+                  assets.map(vehicle => {
                   const { vehicleID, type } = vehicle;
                   let classes = {
                     ["marker"]: true,

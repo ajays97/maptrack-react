@@ -51,7 +51,13 @@ class MainMap extends Component {
                     <Marker
                       icon={icon}
                       key={vehicle.vehicleID}
-                      position={[vehicle.location.latitude, vehicle.location.longitude]}>
+                      position={[vehicle.location.latitude, vehicle.location.longitude]}
+                      onMouseOut={(e) => {
+                        e.target.closePopup()
+                      }}
+                      onMouseOver={(e) => {
+                        e.target.openPopup()
+                      }}>
 
                       <Popup>
                         {/* Popup box template here */}
@@ -63,6 +69,7 @@ class MainMap extends Component {
                     </Marker>
                   );
                 })}
+
               </Map>
             </div>
           );

@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import classnames from "classnames";
-import { Map, Marker, TileLayer } from "react-leaflet";
+import { Map, Marker, TileLayer, Popup } from "react-leaflet";
 import VehicleSocket from "../VehicleSocket/VehicleSocket";
 import { divIcon } from "leaflet";
 
@@ -51,8 +51,16 @@ class MainMap extends Component {
                     <Marker
                       icon={icon}
                       key={vehicle.vehicleID}
-                      position={[vehicle.latitude, vehicle.longitude]}
-                    />
+                      position={[vehicle.location.latitude, vehicle.location.longitude]}>
+
+                      <Popup>
+                        {/* Popup box template here */}
+                        <p><em>Device ID:</em> {vehicle.vehicleID}</p>
+                        <p><em>Device Name:</em> {vehicle.name}</p>
+                        <p><em>Device Type:</em> {vehicle.type}</p>
+                      </Popup>
+
+                    </Marker>
                   );
                 })}
               </Map>

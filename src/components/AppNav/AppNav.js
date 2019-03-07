@@ -128,8 +128,8 @@ class AppNav extends Component {
                     open={open}
                     onClose={this.handleClose}
                   >
-                    <MenuItem onClick={this.handleClose}>Profile</MenuItem>
-                    <MenuItem onClick={this.handleClose}>My account</MenuItem>
+                    <MenuItem onClick={this.handleClose}>Dashboard</MenuItem>
+                    <MenuItem onClick={this.handleClose}>Logout</MenuItem>
                   </Menu>
                 </div>
               )}

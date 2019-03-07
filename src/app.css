@@ -1,3 +1,7 @@
+.leaflet-container {
+  margin-top: 5em;
+}
+
 .marker {
   -webkit-transition: all 7s ease-in-out;
   -moz-transition: all 7s ease-in-out;

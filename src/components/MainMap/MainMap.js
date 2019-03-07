@@ -23,7 +23,7 @@ class MainMap extends Component {
           console.log('Vehicle data:', assets);
           
           return (
-            <div style={cover}>
+            <div style={cover} className="map">
               <Map center={this.state.position} zoom={this.state.zoom} style={cover}>
                 <TileLayer
                   url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"

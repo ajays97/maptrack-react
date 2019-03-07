@@ -1,9 +1,18 @@
+@import url('https://fonts.googleapis.com/css?family=Prompt');
+
+body, html {
+  margin: 0;
+}
+
+.leaflet-container {
+  margin-top: 4.5em;
+}
+
 .marker {
   -webkit-transition: all 7s ease-in-out;
   -moz-transition: all 7s ease-in-out;
   -o-transition: all 7s ease-in-out;
   transition: all 7s ease-in-out;
-
   border-radius: 15px;
   border: 1px solid #FFF;
   display: inline-block;

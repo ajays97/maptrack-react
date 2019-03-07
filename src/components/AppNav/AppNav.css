@@ -1,0 +1,72 @@
+.header {
+    background-color: #fbfbfb;
+    height: 2em;
+    box-shadow: 0 .25em .25em 0 rgba(61, 75, 100, .08);
+    align-items: center;
+    display: flex;
+    flex-direction: row;
+    padding: .75em;
+    text-align: center;
+}
+
+.header .search {
+    display: flex;
+    flex: 8;
+    justify-content: flex-start;
+}
+
+.search input {
+    margin-left: .5em;
+    width: 90%;
+    border: none;
+}
+
+.search button {
+    color: #d0d0d0;
+    background: #fff;
+    border: none;
+}
+
+h6 {
+    color: #221f52;
+    display: flex;
+    flex: 1;
+    font-size: 1em;
+    align-items: center;
+    border-right: 1px solid black;
+    text-decoration: none;
+    font-family: "Prompt";
+    margin-block-start: 0;
+    margin-block-end: 0;
+    margin-inline-start: 0px;
+    margin-inline-end: 0px;
+}
+
+.header-right {
+    flex: 10;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    height: 1.5em;
+    width: 1.5em;
+}
+
+.notification {
+    margin: 1em;
+    align-items: center;
+    height: 1.5em;
+    width: 1.5em;
+}
+
+i {
+    align-self: center;
+    margin-left: 2em;
+    color: #A8A8A8;
+}
+
+.user {
+    margin: 1em;
+    align-self: center;
+    height: 1.5em;
+    width: 1.5em;
+}

@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import { connect } from 'react-redux';
 import PropTypes from 'prop-types';
 import Avatar from '@material-ui/core/Avatar';
 import Button from '@material-ui/core/Button';
@@ -13,6 +14,8 @@ import Paper from '@material-ui/core/Paper';
 import Typography from '@material-ui/core/Typography';
 import withStyles from '@material-ui/core/styles/withStyles';
 import heroImage from '../../assets/hero.png';
+
+import { logout, login } from '../../actions/auth';
 
 import './LoginPage.css';
 
@@ -62,60 +65,93 @@ const styles = theme => ({
 
 class LoginPage extends Component {
     
-  render() {
-  const { classes } = this.props;
-  return (
 
+  constructor(props) {
+    super(props);
 
-    <div className="page">
-      <div className="hero">
-        <img src={heroImage} />
-        <h1 className="quote">A fast, flexible IoT location service that makes it quick and easy to add location awareness to your products.</h1>
-      </div>
-      <div className="main">
-        <main className={classes.main}>
-          <CssBaseline />
-          <Paper className={classes.paper}>
-            {/* <Avatar className={classes.avatar}>
-              <LockOutlinedIcon />
-            </Avatar> */}
+    this.props.dispatch(logout());
 
-            <h1>MAPTRACK</h1>
-            
-            <Typography component="h1" variant="h5" className={classes.title}>
-              Login to your account
-            </Typography>
-            <form className={classes.form}>
-              <FormControl margin="normal" required fullWidth>
-                <InputLabel htmlFor="email">Username</InputLabel>
-                <Input id="email" name="email" autoComplete="email" autoFocus />
-              </FormControl>
-              <FormControl margin="normal" required fullWidth>
-                <InputLabel htmlFor="password">Password</InputLabel>
-                <Input name="password" type="password" id="password" autoComplete="current-password" />
-              </FormControl>
-              {/* <FormControlLabel
-                control={<Checkbox value="remember" color="primary" />}
-                label="Remember me"
-              /> */}
-              <Button
-                type="submit"
-                fullWidth
-                variant="contained"
-                color="primary"
-                className={classes.submit}>
-                LOGIN
-              </Button>
-            </form>
-          </Paper>
-        </main>
-      </div>
-    </div>
-
-
-    
-  );
+    this.state = {
+      username: '',
+      password: '',
+      submitted: false
+    };
   }
+
+  handleChange = (e) => {
+    const { name, value } = e.target;
+    this.setState({ [name]: value });
+  }
+
+  handleSubmit = (e) => {
+    e.preventDefault();
+
+    this.setState({ submitted: true });
+    const { username, password } = this.state;
+    const { dispatch } = this.props;
+    if (username && password) {
+        dispatch(login(username, password));
+    }
+  }
+
+  render() {
+    const { classes } = this.props;
+
+    const { loggingIn } = this.props;
+    const { username, password, submitted } = this.state;
+    
+    return (
+
+
+      <div className="page">
+        <div className="hero">
+          <img src={heroImage} />
+          <h1 className="quote">A fast, flexible IoT location service that makes it quick and easy to add location awareness to your products.</h1>
+        </div>
+        <div className="main">
+          <main className={classes.main}>
+            <CssBaseline />
+            <Paper className={classes.paper}>
+              {/* <Avatar className={classes.avatar}>
+                <LockOutlinedIcon />
+              </Avatar> */}
+
+              <h1>MAPTRACK</h1>
+              
+              <Typography component="h1" variant="h5" className={classes.title}>
+                Login to your account
+              </Typography>
+              <form className={classes.form}>
+                <FormControl margin="normal" required fullWidth>
+                  <InputLabel htmlFor="email">Username</InputLabel>
+                  <Input id="email" name="email" autoComplete="email" autoFocus />
+                </FormControl>
+                <FormControl margin="normal" required fullWidth>
+                  <InputLabel htmlFor="password">Password</InputLabel>
+                  <Input name="password" type="password" id="password" autoComplete="current-password" />
+                </FormControl>
+                {/* <FormControlLabel
+                  control={<Checkbox value="remember" color="primary" />}
+                  label="Remember me"
+                /> */}
+                <Button
+                  type="submit"
+                  fullWidth
+                  variant="contained"
+                  color="primary"
+                  className={classes.submit}>
+                  LOGIN
+                </Button>
+              </form>
+            </Paper>
+          </main>
+        </div>
+      </div>
+
+
+      
+    );
+    }
   
 }
 
@@ -123,4 +159,14 @@ LoginPage.propTypes = {
   classes: PropTypes.object.isRequired,
 };
 
-export default withStyles(styles)(LoginPage);
+function mapStateToProps(state) {
+  console.log(state.authentication);
+  console.log(this.state)
+  const { loggingIn } = state.authentication;
+  
+  return {
+      loggingIn
+  };
+}
+
+export default withStyles(styles)(connect(mapStateToProps)(LoginPage));

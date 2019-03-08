@@ -3,21 +3,30 @@ import MainMap from "./components/MainMap/MainMap";
 import AppNav from "./components/AppNav/AppNav";
 import { BrowserRouter, Link, Route, Switch } from 'react-router-dom';
 import './app.css';
+import { history } from './helpers/history';
+import PrivateRoute from './components/PrivateRoute/PrivateRoute';
 import LoginPage from "./components/LoginPage/LoginPage";
+import HomePage from './components/HomePage/HomePage';
 
 class App extends Component {
+
+  constructor(props) {
+    super(props);
+
+    const { dispatch } = this.props;
+
+    history.listen((location, action) => {
+      
+    });
+
+  }
   
   render() {
     return (
       <div>
         <BrowserRouter>
           <Switch>
-            <Route path="/" exact render={props =>
-              <div>
-                <AppNav />
-                <MainMap />
-              </div>
-             } />
+            <PrivateRoute path="/" exact component={HomePage} />
             <Route path="/login" component={LoginPage} />
           </Switch>
 

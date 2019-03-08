@@ -27,11 +27,11 @@ export const login = (username, password) => dispatch => {
     };
 
     fetch(SERVER_URL + '/auth/login/', requestOptions)
-        .then(handleResponse)
+        .then(res => res.json())
         .then(user => {
             console.log('user', user);
             
-            localStorage.setItem('user', JSON.stringify(user));
+            localStorage.setItem('user', JSON.stringify(user.token));
             
             dispatch({
                 type: LOGIN_REQUEST,

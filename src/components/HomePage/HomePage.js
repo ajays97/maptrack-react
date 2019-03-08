@@ -11,7 +11,7 @@ import { getAll } from '../../actions/auth';
 class HomePage extends Component {
 
   componentDidMount() {
-    this.props.dispatch();
+    // this.props.dispatch();
 
     
 }

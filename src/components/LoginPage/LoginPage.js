@@ -121,14 +121,14 @@ class LoginPage extends Component {
               <Typography component="h1" variant="h5" className={classes.title}>
                 Login to your account
               </Typography>
-              <form className={classes.form}>
+              <form className={classes.form} onSubmit={this.handleSubmit}>
                 <FormControl margin="normal" required fullWidth>
                   <InputLabel htmlFor="email">Username</InputLabel>
-                  <Input id="email" name="email" autoComplete="email" autoFocus />
+                  <Input id="email" name="username" value={username} onChange={this.handleChange} />
                 </FormControl>
                 <FormControl margin="normal" required fullWidth>
                   <InputLabel htmlFor="password">Password</InputLabel>
-                  <Input name="password" type="password" id="password" autoComplete="current-password" />
+                  <Input name="password" type="password" id="password" value={password} onChange={this.handleChange} />
                 </FormControl>
                 {/* <FormControlLabel
                   control={<Checkbox value="remember" color="primary" />}

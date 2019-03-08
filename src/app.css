@@ -1,11 +1,17 @@
 @import url('https://fonts.googleapis.com/css?family=Prompt');
 
-body, html {
+body,
+html {
   margin: 0;
 }
 
 .leaflet-container {
   margin-top: 4.5em;
+}
+
+.leaflet-control-container {
+  position: absolute;
+  right: 56px
 }
 
 .marker {
@@ -16,11 +22,11 @@ body, html {
   border-radius: 15px;
   border: 1px solid #FFF;
   display: inline-block;
-  width: auto!important;
-  height: auto!important;
-  width: 30px!important;
+  width: auto !important;
+  height: auto !important;
+  width: 30px !important;
   text-align: center;
-  height: 30px!important;
+  height: 30px !important;
   line-height: 30px;
   color: #FFF;
   font-weight: bold;
@@ -33,21 +39,27 @@ body, html {
 .rail500 {
   background-color: #D11241;
 }
+
 .rail100 {
   background-color: #0069AA;
 }
+
 .rail200 {
   background-color: #FFC423;
 }
+
 .rail300 {
   background-color: #008752;
 }
+
 .rail400 {
   background-color: #D25D13;
 }
+
 .rail600 {
   background-color: #00F;
 }
+
 .rail700 {
   background-color: #000;
 }

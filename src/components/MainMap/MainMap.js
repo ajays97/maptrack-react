@@ -27,6 +27,7 @@ class MainMap extends Component {
               <Map center={this.state.position} zoom={this.state.zoom} style={cover}>
                 <TileLayer
                   url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
+                  // url="http://{s}.basemaps.cartocdn.com/light_all/{z}/{x}/{y}.png "
                   attribution='&copy; <a href="http://osm.org/copyright">OpenStreetMap</a> contributors'
                 />
                 

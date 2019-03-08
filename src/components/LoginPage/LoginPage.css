@@ -1,0 +1,27 @@
+.page {
+    background-color: #fbfbfb;
+    display: flex;
+    flex-direction: row;
+    height: 100vh;
+}
+
+h1 {
+    color: #221f52;
+    text-align: center;
+    text-decoration: none;
+    font-family: "Prompt";
+    margin-bottom: 3em;
+}
+
+img {
+    width: 100%;
+    height: 100%;
+}
+
+.hero {
+    flex: 6;
+}
+
+.main {
+    flex: 4;
+}

@@ -9,7 +9,7 @@ class App extends Component {
   render() {
     return (
       <div>
-        <AppNav />
+        {/* <AppNav />
 
 
 
@@ -21,9 +21,9 @@ class App extends Component {
 
 
 
-        <MainMap />
+        <MainMap /> */}
 
-        {/* <LoginPage /> */}
+        <LoginPage />
       </div>
     );
   }

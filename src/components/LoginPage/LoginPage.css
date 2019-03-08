@@ -5,6 +5,18 @@
     height: 100vh;
 }
 
+.quote {
+    font-family: Helvetica, Prompt;
+    color: #fbfbfb;
+    align-items: center;
+    text-align: start;
+    position: absolute;
+    top: 25%;
+    left: 25%;
+    transform: translate(-25%, -25%);
+    font-size: 3em;
+}
+
 h1 {
     color: #221f52;
     text-align: center;
@@ -19,7 +31,9 @@ img {
 }
 
 .hero {
+    position: relative;
     flex: 6;
+    height: 100%;
 }
 
 .main {

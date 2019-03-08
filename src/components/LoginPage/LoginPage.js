@@ -12,7 +12,7 @@ import LockOutlinedIcon from '@material-ui/icons/LockOutlined';
 import Paper from '@material-ui/core/Paper';
 import Typography from '@material-ui/core/Typography';
 import withStyles from '@material-ui/core/styles/withStyles';
-import heroImage from '../../assets/mining.png';
+import heroImage from '../../assets/hero.png';
 
 import './LoginPage.css';
 
@@ -70,6 +70,7 @@ class LoginPage extends Component {
     <div className="page">
       <div className="hero">
         <img src={heroImage} />
+        <h1 className="quote">A fast, flexible IoT location service that makes it quick and easy to add location awareness to your products.</h1>
       </div>
       <div className="main">
         <main className={classes.main}>

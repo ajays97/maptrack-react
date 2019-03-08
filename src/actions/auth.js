@@ -21,15 +21,18 @@ export const login = (username, password) => dispatch => {
             'Content-Type': 'application/json'
         },
         body: JSON.stringify({
-            username,
+            email: username,
             password
         })
     };
 
-    fetch(SERVER_URL + API_URL + 'auth/authenticate')
-        .then(handleResponse)
+    fetch(SERVER_URL + '/auth/login/', requestOptions)
+        .then(res => res.json())
         .then(user => {
-            localStorage.setItem('user', JSON.stringify(user));
+            console.log('user', user);
+            
+            localStorage.setItem('user', JSON.stringify(user.token));
+            
             dispatch({
                 type: LOGIN_REQUEST,
                 payload: user
@@ -46,16 +49,9 @@ export const logout = () => dispatch => {
     });
 }
 
-function getAll() {
-    const requestOptions = {
-        method: 'GET',
-        headers: authHeader()
-    };
-
-    return fetch(SERVER_URL + API_URL + '/users', requestOptions).then(handleResponse);
-}
-
 function handleResponse(response) {
+    console.log('Login response:', response);
+    
     return response.text().then(text => {
         const data = text && JSON.parse(text);
         if (!response.ok) {

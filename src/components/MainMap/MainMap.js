@@ -3,9 +3,10 @@ import classnames from "classnames";
 import { Map, Marker, TileLayer, Popup } from "react-leaflet";
 import VehicleSocket from "../VehicleSocket/VehicleSocket";
 import { divIcon } from "leaflet";
+import SideNav from '../SideNav/SideNav';
 
 const position = [12.9, 77.63];
-const cover = { position: "absolute", left: 0, right: 0, top: 0, bottom: 0 };
+const cover = { position: "absolute", left: 0, right: 0, top: 0, bottom: 0, height: 100 + 'vh', zIndex: -1 };
 const urlParams = new URLSearchParams(window.location.search);
 
 class MainMap extends Component {
@@ -28,8 +29,7 @@ class MainMap extends Component {
                 <TileLayer
                   url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
                   // url="http://{s}.basemaps.cartocdn.com/light_all/{z}/{x}/{y}.png "
-                  attribution='&copy; <a href="http://osm.org/copyright">OpenStreetMap</a> contributors'
-                />
+                  attribution='&copy; <a href="http://osm.org/copyright">OpenStreetMap</a> contributors' />
                 
                 {
                   assets.map(vehicle => {

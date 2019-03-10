@@ -24,13 +24,14 @@ class App extends Component {
   render() {
     return (
       <div>
-        <BrowserRouter>
+        {/* <BrowserRouter>
           <Switch>
             <PrivateRoute path="/" exact component={HomePage} />
             <Route path="/login" component={LoginPage} />
           </Switch>
 
-        </BrowserRouter>
+        </BrowserRouter> */}
+        <HomePage />
       </div>
     );
   }

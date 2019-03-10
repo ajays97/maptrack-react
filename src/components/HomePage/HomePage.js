@@ -7,6 +7,7 @@ import AppNav from '../AppNav/AppNav';
 import MainMap from '../MainMap/MainMap';
 
 import { getAll } from '../../actions/auth';
+import SideNav from '../SideNav/SideNav';
 
 class HomePage extends Component {
 
@@ -20,6 +21,7 @@ class HomePage extends Component {
     return (
       <div>
         <AppNav />
+        <SideNav />
         <MainMap />
       </div>
     );

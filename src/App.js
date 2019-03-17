@@ -17,13 +17,14 @@ class App extends Component {
   render() {
     return (
       <div>
-        <BrowserRouter>
+        {/* <BrowserRouter>
           <Switch>
             <PrivateRoute path="/" exact component={HomePage} />
             <PrivateRoute path="/dashboard" exact component={DashboardPage} />
             <Route path="/login" component={LoginPage} />
           </Switch>
-        </BrowserRouter>
+        </BrowserRouter> */}
+        <DashboardPage />
 
         {/* <HomePage /> */}
       </div>

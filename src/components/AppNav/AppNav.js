@@ -96,15 +96,22 @@ const styles = theme => ({
 class PrimarySearchAppBar extends React.Component {
   state = {
     anchorEl: null,
-    mobileMoreAnchorEl: null
+    mobileMoreAnchorEl: null,
+    notificationAnchor: null
   };
 
   handleProfileMenuOpen = event => {
     this.setState({ anchorEl: event.currentTarget });
   };
 
+  handleNotificationMenuOpen = e => {
+    this.setState({
+      notificationAnchor: e.currentTarget
+    });
+  };
+
   handleMenuClose = () => {
-    this.setState({ anchorEl: null });
+    this.setState({ anchorEl: null, notificationAnchor: null });
     this.handleMobileMenuClose();
   };
 
@@ -117,10 +124,11 @@ class PrimarySearchAppBar extends React.Component {
   };
 
   render() {
-    const { anchorEl, mobileMoreAnchorEl } = this.state;
+    const { anchorEl, mobileMoreAnchorEl, notificationAnchor } = this.state;
     const { classes } = this.props;
     const isMenuOpen = Boolean(anchorEl);
     const isMobileMenuOpen = Boolean(mobileMoreAnchorEl);
+    const isNotificationOpen = Boolean(notificationAnchor);
 
     const renderMenu = (
       <Menu
@@ -132,6 +140,19 @@ class PrimarySearchAppBar extends React.Component {
       >
         <MenuItem onClick={this.handleMenuClose}>Dashboard</MenuItem>
         <MenuItem onClick={this.handleMenuClose}>Logout</MenuItem>
+      </Menu>
+    );
+
+    const renderNotification = (
+      <Menu
+        anchorEl={notificationAnchor}
+        anchorOrigin={{ vertical: "top", horizontal: "right" }}
+        transformOrigin={{ vertical: "top", horizontal: "right" }}
+        open={isNotificationOpen}
+        onClose={this.handleMenuClose}
+      >
+        <MenuItem onClick={this.handleMenuClose}>Text</MenuItem>
+        <MenuItem onClick={this.handleMenuClose}>Text2</MenuItem>
       </Menu>
     );
 
@@ -151,7 +172,7 @@ class PrimarySearchAppBar extends React.Component {
           </IconButton>
           <p>Messages</p>
         </MenuItem>
-        <MenuItem onClick={this.handleMobileMenuClose}>
+        <MenuItem onClick={this.handleNotificationMenuOpen}>
           <IconButton color="inherit">
             <Badge badgeContent={11} color="secondary">
               <NotificationsIcon />
@@ -195,7 +216,12 @@ class PrimarySearchAppBar extends React.Component {
             </div> */}
             <div className={classes.grow} />
             <div className={classes.sectionDesktop}>
-              <IconButton color="inherit">
+              <IconButton
+                aria-owns={isNotificationOpen ? "material-appbar" : undefined}
+                aria-haspopup="true"
+                onClick={this.handleNotificationMenuOpen}
+                color="inherit"
+              >
                 <Badge badgeContent={17} color="secondary">
                   <NotificationsIcon />
                 </Badge>
@@ -221,6 +247,7 @@ class PrimarySearchAppBar extends React.Component {
           </Toolbar>
         </AppBar>
         {renderMenu}
+        {renderNotification}
         {renderMobileMenu}
       </div>
     );

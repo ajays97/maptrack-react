@@ -1,0 +1,33 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="138.204" height="173" viewBox="0 0 138.204 173">
+    <defs>
+        <style>
+            .cls-1{fill:#fff}.cls-2{fill:#680cda}.cls-3{filter:url(#Shape_7)}.cls-4{filter:url(#Rounded_Rectangle_3)}
+        </style>
+        <filter id="Rounded_Rectangle_3" width="138.204" height="130.315" x="0" y="0" filterUnits="userSpaceOnUse">
+            <feOffset dy="1"/>
+            <feGaussianBlur result="blur" stdDeviation="10"/>
+            <feFlood flood-opacity=".2"/>
+            <feComposite in2="blur" operator="in"/>
+            <feComposite in="SourceGraphic"/>
+        </filter>
+        <filter id="Shape_7" width="87.843" height="85.725" x="26.736" y="87.275" filterUnits="userSpaceOnUse">
+            <feOffset dy="20"/>
+            <feGaussianBlur result="blur-2" stdDeviation="10"/>
+            <feFlood flood-opacity=".149"/>
+            <feComposite in2="blur-2" operator="in"/>
+            <feComposite in="SourceGraphic"/>
+        </filter>
+    </defs>
+    <g id="Group_215" data-name="Group 215" transform="translate(-1000 -98)">
+        <g class="cls-4" transform="translate(1000 98)">
+            <rect id="Rounded_Rectangle_3-2" width="78.204" height="70.315" class="cls-1" data-name="Rounded Rectangle 3" rx="5" transform="translate(30 29)"/>
+        </g>
+        <g class="cls-3" transform="translate(1000 98)">
+            <path id="Shape_7-2" d="M7497.453 2184.123h-5.966l13.921 13.852 13.921-13.852h-5.966l-7.955 7.916zm1.99-11.873h-7.956l13.921 13.852 13.921-13.852h-8.154" class="cls-1" data-name="Shape 7" transform="translate(-7434.75 -2074.97)"/>
+        </g>
+        <g id="Group_211" data-name="Group 211" transform="translate(-782.52 -14401.863)">
+            <path id="Path_275" d="M34.368 234.785l.014-.017-7.665-1.7V230l-4.2 1.01v3.047c0 .687.937 1.242 2.1 1.242a2.542 2.542 0 0 0 1.874-.679l4.392.977-12.6 2.9a4.912 4.912 0 0 1-2.14 0l-12.618-2.909 4.266-.952a2.526 2.526 0 0 0 1.86.662c1.161 0 2.1-.555 2.1-1.242v-3.046l-4.2-.985v3.063L0 234.769v11.383c0 .364.378.687.951.82l15.191 3.494a4.911 4.911 0 0 0 2.14 0l15.177-3.494c.574-.132.951-.455.951-.82v-11.375zm-4.154 9.67c0 .364-.378.687-.951.82l-5.833 1.349c-.979.223-2.028-.2-2.028-.82v-4.76c0-.364.378-.687.951-.82l5.833-1.349c.979-.224 2.028.2 2.028.82z" class="cls-2" data-name="Path 275" transform="translate(1834.52 14332.904)"/>
+            <path id="Path_276" d="M38.053 9.554v4.462a2.629 2.629 0 0 0-2.448.745c-.42.637.1 1.358 1.175 1.614l8.826 2.061v6.731c0 .687.937 1.242 2.1 1.242s2.1-.555 2.1-1.242v-6.738l8.519-2.061c1.077-.257 1.581-.985 1.147-1.623a2.55 2.55 0 0 0-2.252-.753V9.521l-4.2 1.01v4.438l-3.217.778V8.908l8.519-2.061c1.078-.257 1.578-.986 1.147-1.623a2.55 2.55 0 0 0-2.252-.753V1.242C57.217.555 56.28 0 55.119 0s-2.1.555-2.1 1.242v4.206l-3.219.778V2.815c0-.687-.937-1.242-2.1-1.242s-2.1.555-2.1 1.242v3.436l-3.35-.787V1.242C42.25.555 41.313 0 40.152 0s-2.1.555-2.1 1.242V4.5a2.629 2.629 0 0 0-2.448.745c-.42.637.1 1.358 1.175 1.614l8.826 2.061v6.847l-3.357-.778v-4.45z" class="cls-2" data-name="Path 276" transform="translate(1804.02 14543.863)"/>
+        </g>
+    </g>
+</svg>

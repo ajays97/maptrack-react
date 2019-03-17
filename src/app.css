@@ -1,0 +1,55 @@
+@import url('https://fonts.googleapis.com/css?family=Prompt');
+
+body,
+html {
+  margin: 0;
+  padding: 0;
+}
+
+.leaflet-container {
+  margin-top: 4.5em;
+}
+
+.leaflet-control-container {
+  position: absolute;
+  right: 56px
+}
+
+.marker {
+  -webkit-transition: all 5s ease-in-out;
+  -moz-transition: all 5s ease-in-out;
+  -o-transition: all 5s ease-in-out;
+  transition: all 5s ease-in-out;
+  display: inline-block;
+  width: auto !important;
+  height: auto !important;
+  width: 72px !important;
+  text-align: center;
+  height: 72px !important;
+  line-height: 30px;
+  color: #FFF;
+  font-weight: bold;
+}
+
+.popup {
+  -webkit-transition: all 5s ease-in-out;
+  -moz-transition: all 5s ease-in-out;
+  -o-transition: all 5s ease-in-out;
+  transition: all 5s ease-in-out;
+}
+
+.TRUCK {
+  width: 2em;
+  height: 2em;
+  /* background-color: #333; */
+  /* background: url('./assets/icons/truck.svg'); */
+  content: url('./assets/icons/truck.svg');
+}
+
+.HUMAN {
+  /* background-color: #D11241; */
+  width: 2em;
+  height: 2em;
+  /* background: url('./assets/icons/human.svg'); */
+  content: url('./assets/icons/human.svg');
+}

@@ -1,0 +1,34 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="138.204" height="168" viewBox="0 0 138.204 168">
+    <defs>
+        <style>
+            .cls-1{fill:#fff}.cls-2{fill:#9329ca}.cls-3{filter:url(#Shape_7)}.cls-4{filter:url(#Rounded_Rectangle_3)}
+        </style>
+        <filter id="Rounded_Rectangle_3" width="138.204" height="130.315" x="0" y="0" filterUnits="userSpaceOnUse">
+            <feOffset dy="1"/>
+            <feGaussianBlur result="blur" stdDeviation="10"/>
+            <feFlood flood-opacity=".2"/>
+            <feComposite in2="blur" operator="in"/>
+            <feComposite in="SourceGraphic"/>
+        </filter>
+        <filter id="Shape_7" width="87.843" height="85.725" x="26.736" y="82.275" filterUnits="userSpaceOnUse">
+            <feOffset dy="15"/>
+            <feGaussianBlur result="blur-2" stdDeviation="10"/>
+            <feFlood flood-opacity=".149"/>
+            <feComposite in2="blur-2" operator="in"/>
+            <feComposite in="SourceGraphic"/>
+        </filter>
+    </defs>
+    <g id="Group_212" data-name="Group 212" transform="translate(-667 -98)">
+        <g class="cls-4" transform="translate(667 98)">
+            <rect id="Rounded_Rectangle_3-2" width="78.204" height="70.315" class="cls-1" data-name="Rounded Rectangle 3" rx="5" transform="translate(30 29)"/>
+        </g>
+        <g class="cls-3" transform="translate(667 98)">
+            <path id="Shape_7-2" d="M7497.453 2184.123h-5.966l13.921 13.852 13.921-13.852h-5.966l-7.955 7.916zm1.99-11.873h-7.956l13.921 13.852 13.921-13.852h-8.154" class="cls-1" data-name="Shape 7" transform="translate(-7434.75 -2074.97)"/>
+        </g>
+        <g id="Group_209" data-name="Group 209" transform="translate(706 144)">
+            <path id="Path_1" d="M40.554 198.7a5.154 5.154 0 1 0 5.154 5.154 5.157 5.157 0 0 0-5.154-5.154zm0 6.558a1.4 1.4 0 1 1 1.4-1.4 1.4 1.4 0 0 1-1.4 1.4z" class="cls-2" data-name="Path 1" transform="translate(-30.883 -173.349)"/>
+            <path id="Path_2" d="M349.654 198.7a5.154 5.154 0 1 0 5.155 5.154 5.157 5.157 0 0 0-5.155-5.154zm0 6.558a1.4 1.4 0 1 1 1.4-1.4 1.4 1.4 0 0 1-1.4 1.4z" class="cls-2" data-name="Path 2" transform="translate(-300.546 -173.349)"/>
+            <path id="Path_3" d="M59.481 26.028h-2.195a8.315 8.315 0 0 0-2.718-3.062h3.942a2.365 2.365 0 0 0 2.322-2.437V3.177a1.34 1.34 0 0 0-2.679 0V5.1h-31V3.942A3.828 3.828 0 0 0 23.387 0h-2.909a1.34 1.34 0 0 0 0 2.679h2.909A1.208 1.208 0 0 1 24.6 3.942v19a1.366 1.366 0 0 0 1.378 1.3h16.228a8.119 8.119 0 0 0-1.276 1.786H22.3V7.591A2.362 2.362 0 0 0 19.942 5.1h-2.82a4.632 4.632 0 0 0-3.483 1.56L2.462 19.266A4.684 4.684 0 0 0 1.25 22.34v2.16h1.3a9.14 9.14 0 0 0-1.365 2.169H.893a1.247 1.247 0 0 0-.357 2.22 9.716 9.716 0 0 0-.128 1.506 1.314 1.314 0 0 0 2.628.013 6.634 6.634 0 1 1 13.269 0 1.314 1.314 0 0 0 2.628 0 10.467 10.467 0 0 0-.089-1.314H39.96a8.512 8.512 0 0 0-.089 1.314 1.314 1.314 0 0 0 2.628 0 6.634 6.634 0 1 1 13.269 0 1.314 1.314 0 0 0 2.628 0 10.465 10.465 0 0 0-.089-1.314h1.225a1.52 1.52 0 0 0 1.493-1.531 1.563 1.563 0 0 0-1.544-1.535zM19.75 17.569a1.006 1.006 0 0 1-.982 1.046L9.212 18.6a1.051 1.051 0 0 1-.753-1.735l7.528-9.033a1.078 1.078 0 0 1 .766-.434h2.041c.561 0 .957.625.957 1.2zm17.211-7.132l-4.733 7.17a.525.525 0 0 1-.383.255h-3.01a.486.486 0 0 1-.383-.74l4.733-7.17a.525.525 0 0 1 .383-.255h3.024a.477.477 0 0 1 .37.74zm9.722 0l-4.721 7.17a.525.525 0 0 1-.383.255h-3.022a.486.486 0 0 1-.383-.74l4.733-7.17a.525.525 0 0 1 .383-.252h3.024a.477.477 0 0 1 .37.737zm5 7.183a.508.508 0 0 1-.383.242h-3.021a.486.486 0 0 1-.383-.74l4.746-7.17a.525.525 0 0 1 .383-.255h3.024a.5.5 0 0 1 .383.753z" class="cls-2" data-name="Path 3"/>
+        </g>
+    </g>
+</svg>

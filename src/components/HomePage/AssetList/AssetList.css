@@ -1,0 +1,33 @@
+.asset-list {
+    height: 100vh;
+    overflow-y: scroll;
+}
+
+.asset-list::-webkit-scrollbar {
+    width: 0 !important;
+}
+
+.asset-icon {
+    margin: 0;
+}
+
+.holder {
+    background: white;
+}
+
+ul {
+    padding: 0;
+}
+
+.search-bar {
+    background: #8a99fb;
+
+}
+
+input {
+    height: 1.75em;
+    border-radius: .25em;
+    margin: 1em 1.25em 1em 1.25em;
+    border: 1px solid lightgray;
+    width: 85%;
+}

@@ -1,0 +1,1 @@
+export default ['HUMAN', 'TRUCK', 'JCB', 'OTHER'];
